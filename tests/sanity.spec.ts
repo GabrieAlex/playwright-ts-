@@ -46,6 +46,6 @@ test('demo test', async ({ page }) => {
   test('demo test 2', async ({ page }) => {
     
   const loginPage = new LoginPage(page)
-  await loginPage.loginToApplication(UseerCredentials.Sdanard_User,UseerCredentials.Correct_password, ApplicationUrl.Base_Url);
+  await loginPage.loginToApplication(UseerCredentials.Error_User,UseerCredentials.Correct_password, ApplicationUrl.Base_Url);
 
   });
