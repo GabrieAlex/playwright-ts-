@@ -1,6 +1,7 @@
 import { url } from "inspector";
 import { expect, Locator, Page } from "playwright/test";
 import ApplicationUrl from "../helpers/ApplicationUrl";
+import UseerCredentials from "../helpers/UserCredentials";
 
 export default class LoginPage{
 
@@ -19,7 +20,7 @@ loginButton: Locator;
 
     }
 
-    public async loginToApplication(username: string, password: string, url: string){
+    public async loginToApplication(username = UseerCredentials.Sdanard_User, password = UseerCredentials.Correct_password, url = ApplicationUrl.Base_Url){
         //option 1
         // await this.page.locator('[data-test="username"]').fill('standard_user');
         // await this.page.locator('[data-test="password"]').fill('secret_sauce');

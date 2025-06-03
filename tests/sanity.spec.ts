@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import LoginPage from '../pages/LoginPage';
 import UseerCredentials from '../helpers/UserCredentials';
 import ApplicationUrl from '../helpers/ApplicationUrl';
+import { url } from 'inspector';
 
 test('sanity test', async ({ page }) => {
 
@@ -11,7 +12,7 @@ test('sanity test', async ({ page }) => {
 //   await page.locator('[data-test="login-button"]').click();
 
 const loginPage = new LoginPage(page)
-await loginPage.loginToApplication(UseerCredentials.Sdanard_User,UseerCredentials.Correct_password, ApplicationUrl.Base_Url);
+await loginPage.loginToApplication();
 
 await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
 await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
